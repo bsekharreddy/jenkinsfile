@@ -27,7 +27,7 @@ pipeline {
 		  sh "sonar-scanner"//
 		  echo "Analysis is Pending"
         }
-      }
+      //}
         
     }
 }

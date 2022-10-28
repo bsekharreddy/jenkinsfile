@@ -19,7 +19,7 @@ pipeline {
     }
     stage('SonarQube analysis') {
      tools {
-        sonarQube 'SonarQube4.7.0.2747'
+        SonarQube 'sonarqube 4.7'
       }
       steps {
         withSonarQubeEnv('SonarQube') {

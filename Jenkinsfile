@@ -18,14 +18,14 @@ pipeline {
         }
     }
     stage('SonarQube analysis') {
-     tools {
+     //tools {
         SonarQube 'sonarqube 4.7'
-      }
+      }//
       steps {
-        withSonarQubeEnv('SonarQube') {
+        //withSonarQubeEnv('SonarQube') {
           sh "${scannerHome}/bin/sonar-scanner"
-		  sh "sonar-scanner"
-		  echo "Analysis Completed"
+		  sh "sonar-scanner"//
+		  echo "Analysis is Pending"
         }
       }
         

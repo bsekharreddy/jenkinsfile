@@ -18,15 +18,15 @@ pipeline {
         }
     }
     stage('SonarQube analysis') {
-      //tools {
-        //sonarQube 'SonarQube4.7.0.2747'
-      //}
+     tools {
+        sonarQube 'SonarQube4.7.0.2747'
+      }
       steps {
-        //withSonarQubeEnv('SonarQube') {
-          //sh "${scannerHome}/bin/sonar-scanner"
-		  //sh "sonar-scanner"
+        withSonarQubeEnv('SonarQube') {
+          sh "${scannerHome}/bin/sonar-scanner"
+		  sh "sonar-scanner"
 		  echo "Analysis Completed"
-        //}
+        }
       }
         
     }

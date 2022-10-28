@@ -19,15 +19,15 @@ pipeline {
     }
     stage('SonarQube analysis') {
      //tools {
-        SonarQube 'sonarqube 4.7'
-      }//
+        //SonarQube 'sonarqube 4.7'
+      //}
       steps {
         //withSonarQubeEnv('SonarQube') {
-          sh "${scannerHome}/bin/sonar-scanner"
-		  sh "sonar-scanner"//
+          //sh "${scannerHome}/bin/sonar-scanner"
+		 // sh "sonar-scanner"
 		  echo "Analysis is Pending"
-        }
-      //}
+        //}
+      }
         
     }
 }
